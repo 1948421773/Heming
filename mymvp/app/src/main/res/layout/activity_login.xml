@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/btn_height"
+
+            android:background="@mipmap/login_tx"
+            tools:ignore="MissingConstraints"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/rl_top"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/login_edit_bg"
+            android:drawableLeft="@mipmap/login_zh"
+            android:drawablePadding="10dp"
+            android:paddingLeft="8dp"
+            android:gravity="center_vertical"
+            android:hint="请输入用户名"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#a3a3a3"
+            android:textSize="14sp"/>
+        <EditText
+            android:id="@+id/et_psw"
+            android:layout_marginTop="95dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@mipmap/login_edit_bg"
+            android:drawableLeft="@mipmap/login_mm"
+            android:drawablePadding="10dp"
+            android:paddingLeft="8dp"
+            android:gravity="center_vertical"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#a3a3a3"
+            android:textSize="14sp"/>
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/et_psw"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_up_logingbutton"
+            android:text="登 录"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
